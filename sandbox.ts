@@ -1,6 +1,6 @@
 /** @format */
 
-const name = "Juan";
+const name = "Carlos";
 console.log("👉 Line-2 ▶︎▶︎", name);
 
 const inputs = document.querySelectorAll("input");
