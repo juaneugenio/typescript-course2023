@@ -1,5 +1,11 @@
 /** @format */
-var name = "Juan";
-console.log("👉 Line-2 ▶︎▶︎", name);
-var inputs = document.querySelectorAll("input");
-console.log("%c 👉 Line-5", "font-size:13px; background:#993441; color:#ffb8b1;", inputs);
+var character = "juan";
+// character = "anna";
+var age = 30;
+// age = treinta;
+var isBoolean = false;
+// isBoolean = "true";
+var circleRad = function (diameter) {
+    return diameter * Math.PI;
+};
+console.log("👉 Line-15 ▶︎▶︎", circleRad(12));

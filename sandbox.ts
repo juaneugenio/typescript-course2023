@@ -1,7 +1,15 @@
 /** @format */
 
-const name = "Juan";
-console.log("👉 Line-2 ▶︎▶︎", name);
+const character = "juan";
+// character = "anna";
 
-const inputs = document.querySelectorAll("input");
-console.log("%c 👉 Line-5", "font-size:13px; background:#993441; color:#ffb8b1;", inputs);
+let age = 30;
+// age = treinta;
+
+let isBoolean = false;
+// isBoolean = "true";
+
+const circleRad = (diameter: number) => {
+	return diameter * Math.PI;
+};
+console.log("👉 Line-15 ▶︎▶︎", circleRad(12));
