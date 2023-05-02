@@ -1,23 +1,15 @@
 /** @format */
 
-let greet: Function;
+type StringOrNum = string | number; //Union Type as an Alias.
+type ObjWithName = { name: string; uid: StringOrNum }; // Here we chained the type of the "uid" property equals to an Uniontyped value.
 
-greet = () => {
-	console.log("Hello World!");
+const logDetails = (uid: String, item: string) => {
+	console.log("👉 Line-6 ▶︎▶︎", `${item} has an id of: ${uid}`);
 };
 
-const add = (a: number, b: number, c?: number | string): void => {
-	// optional parameter typed with an ?, e.g. y?:number | string
-	// const add = (a: number, b: number, c: number | string = 5) => { // To define a "default parameter" we can use a value like: y: number = 5. Furhtermore optional parameter are recommended to place at the end  of the other parameter list.
-	console.log("👉 Line-11 ▶︎▶︎", a + b);
-	console.log("👉 Line-12 ▶︎▶︎", "10");
-	// this function returns nothing, that's why the fucntion type is "void", because in the future the function can return a number, a string, an object, etc. but in this moment it will return nothing.
+const greet = (user: ObjWithName) => {
+	console.log("👉 Line-10 ▶︎▶︎", `${user.name} says hello`);
 };
-
-add(7, 3);
-
-const minus = (a: number, b: number): number => {
-	// this fn explicitly returns a number by contrast with the previous fn.
-	return a - b;
+const greetAgain = (user: ObjWithName) => {
+	console.log("👉 Line-10 ▶︎▶︎", `${user.name} says hello`);
 };
-minus(10, 3);
