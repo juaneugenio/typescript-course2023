@@ -1,25 +1,23 @@
 /** @format */
 
-let age: any = 25;
+let greet: Function;
 
-age = true;
-console.log(age);
-age = "hello";
-console.log(age);
-age = { name: "luigi" };
-console.log(age);
+greet = () => {
+	console.log("Hello World!");
+};
 
-let mixed: any[] = [];
+const add = (a: number, b: number, c?: number | string): void => {
+	// optional parameter typed with an ?, e.g. y?:number | string
+	// const add = (a: number, b: number, c: number | string = 5) => { // To define a "default parameter" we can use a value like: y: number = 5. Furhtermore optional parameter are recommended to place at the end  of the other parameter list.
+	console.log("👉 Line-11 ▶︎▶︎", a + b);
+	console.log("👉 Line-12 ▶︎▶︎", "10");
+	// this function returns nothing, that's why the fucntion type is "void", because in the future the function can return a number, a string, an object, etc. but in this moment it will return nothing.
+};
 
-mixed.push(5);
-mixed.push("mario");
-// mixed.push(false);
-console.log(mixed);
+add(7, 3);
 
-let ninja: { name: any; age: any };
-
-ninja = { name: "yoshi", age: 25 };
-console.log("pepa");
-
-ninja = { name: 25, age: "yoshi" };
-console.log(ninja);
+const minus = (a: number, b: number): number => {
+	// this fn explicitly returns a number by contrast with the previous fn.
+	return a - b;
+};
+minus(10, 3);
