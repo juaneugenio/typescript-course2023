@@ -13,13 +13,13 @@ let mixed: any[] = [];
 
 mixed.push(5);
 mixed.push("mario");
-mixed.push(false);
+// mixed.push(false);
 console.log(mixed);
 
 let ninja: { name: any; age: any };
 
 ninja = { name: "yoshi", age: 25 };
-console.log(ninja);
+console.log("pepa");
 
 ninja = { name: 25, age: "yoshi" };
 console.log(ninja);
