@@ -22,7 +22,7 @@ const invTwo = new Invoice("Luigi", "work on the server", 500);
 let invoices: Invoice[] = [];
 invoices.push(invOne);
 invoices.push(invTwo);
-
+// shows the array
 console.log(invoices);
 
 // from lesson 11
