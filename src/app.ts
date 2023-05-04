@@ -1,11 +1,31 @@
 /** @format */
-const anchor = document.querySelector("a")!;
-if (anchor) {
-	console.log(anchor.href);
-}
-console.log(anchor.href);
 
-//const form = document.querySelector('form')!;
+class Invoice {
+	client: string;
+	details: string;
+	amount: number;
+
+	constructor(c: string, d: string, a: number) {
+		this.client = c;
+		this.details = d;
+		this.amount = a;
+	}
+
+	format() {
+		return `${this.client} owes €${this.amount} for ${this.details}`;
+	}
+}
+
+const invOne = new Invoice("Tyler", "work on the website", 300);
+const invTwo = new Invoice("Luigi", "work on the server", 500);
+
+let invoices: Invoice[] = [];
+invoices.push(invOne);
+invoices.push(invTwo);
+
+console.log(invoices);
+
+// from lesson 11
 const form = document.querySelector(".new-item-form") as HTMLFormElement;
 console.log(form.children);
 
