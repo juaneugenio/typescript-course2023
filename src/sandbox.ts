@@ -1,15 +1,26 @@
 /** @format */
+// let greet: Function;
+// example 1
+let greet: (a: string, b: string) => void;
 
-type StringOrNum = string | number; //Union Type as an Alias.
-type ObjWithName = { name: string; uid: StringOrNum }; // Here we chained the type of the "uid" property equals to an Uniontyped value.
-
-const logDetails = (uid: String, item: string) => {
-	console.log("👉 Line-6 ▶︎▶︎", `${item} has an id of: ${uid}`);
+greet = (name: string, greeting: string) => {
+	console.log(`${name} says ${greeting}`);
 };
 
-const greet = (user: ObjWithName) => {
-	console.log("👉 Line-10 ▶︎▶︎", `${user.name} says hello`);
+// example 2
+let calc: (a: number, b: number, c: string) => number;
+
+calc = (numOne: number, numTwo: number, action: string) => {
+	if (action === "add") {
+		return numOne + numTwo;
+	} else {
+		return numOne - numTwo;
+	}
 };
-const greetAgain = (user: ObjWithName) => {
-	console.log("👉 Line-10 ▶︎▶︎", `${user.name} says hello`);
+
+// example 3
+let logDetails: (obj: { name: string; age: number }) => void;
+
+logDetails = (ninja: { name: string; age: number }) => {
+	console.log(`${ninja.name} is ${ninja.age} years old`);
 };
