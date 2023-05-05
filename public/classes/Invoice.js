@@ -1,4 +1,3 @@
-/** @format */
 export class Invoice {
     // client: string;
     // details: string;
