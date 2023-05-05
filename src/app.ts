@@ -1,4 +1,33 @@
 /** @format */
+
+interface IsPerson {
+	name: string;
+	age: number;
+	speak(a: string): void;
+	spend(a: number): number;
+}
+
+const me: IsPerson = {
+	name: "Juan",
+	age: 35,
+	speak(text: string): void {
+		console.log(text);
+	},
+	spend(amount: number): number {
+		console.log("👉 Line-17 ▶︎▶︎", amount);
+		return amount;
+	},
+};
+
+console.log("👉 Line-22 ▶︎▶︎", me);
+me.speak("hello there");
+
+let greetPerson = (hombre: IsPerson): any => {
+	console.log("👉 Hello", hombre.name);
+};
+
+greetPerson(me);
+
 import { Invoice } from "./classes/Invoice.js";
 
 const invOne = new Invoice("Tyler", "work on the website", 300);
