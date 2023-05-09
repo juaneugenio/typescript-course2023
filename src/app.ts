@@ -2,56 +2,11 @@
 import { Invoice } from "./classes/Invoice.js";
 import { Payment } from "./classes/Payment.js";
 import { HasFormatter } from "./interfaces/HasFormatter.js";
+import { LisTemplate } from "./classes/ListTemplate.js";
 
-// From lesson 16. We use Interfaces and classes
-// let docOne: HasFormatter;
-// let docTwo: HasFormatter;
-
-// docOne = new Invoice("Juan", "Web work", 200);
-// docTwo = new Payment("Anna", "House work", 150);
-
-// let docs: HasFormatter[] = [];
-// docs.push(docOne);
-// docs.push(docTwo);
-
-// console.log("👉 Line-17 ▶︎▶︎", docs);
-
-// interface IsPerson {
-// 	name: string;
-// 	age: number;
-// 	speak(a: string): void;
-// 	spend(a: number): number;
-// }
-
-// const me: IsPerson = {
-// 	name: "Juan",
-// 	age: 35,
-// 	speak(text: string): void {
-// 		console.log(text);
-// 	},
-// 	spend(amount: number): number {
-// 		console.log("👉 Line-17 ▶︎▶︎", amount);
-// 		return amount;
-// 	},
-// };
-
-// console.log("👉 Line-22 ▶︎▶︎", me);
-// me.speak("hello there");
-
-// let greetPerson = (hombre: IsPerson): any => {
-// 	console.log("👉 Hello", hombre.name);
-// };
-
-// greetPerson(me);
-
-// const invOne = new Invoice("Tyler", "work on the website", 300);
-// const invTwo = new Invoice("Luigi", "work on the server", 500);
-
-// let invoices: Invoice[] = [];
-// invoices.push(invOne);
-// invoices.push(invTwo);
-
-// invoices.forEach((inv) => console.log(inv.client, inv.amount, inv.format()));
+// list template instances
+const ul = document.querySelector("ul")!;
+const list = new LisTemplate(ul);
 
 // from lesson 11
 const form = document.querySelector(".new-item-form") as HTMLFormElement;
@@ -71,5 +26,6 @@ form.addEventListener("submit", (e: Event) => {
 	} else {
 		doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
 	}
-	console.log(doc);
+
+	list.render(doc, type.value, "end");
 });
